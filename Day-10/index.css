@@ -1,0 +1,78 @@
+.mani{
+    display: inline-block;
+    max-width: fit-content;
+    text-align: center;
+    border-radius:5px;
+    background-color: blue;
+    color:#fff;
+    font-size: 20px;
+    padding: 0.5em;
+}
+#muthu{
+    display: inline-block;
+    max-width: fit-content;
+    border-radius:5px;
+    text-align: center;
+    background-color: black;
+    color:#fff;
+    font-size: 20px;
+    padding: 0.5em;
+}
+
+input:focus{
+    outline:green solid 2px;
+
+}
+button:active{
+    background-color: chartreuse;
+}
+a:visited{
+    color:green;
+}
+a:link{
+    color:darkblue
+}
+
+/* positioning */
+.box1{
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:2rem;
+    width:20rem;
+    height:15rem;
+    background-color: green;
+    color:#fff;
+    font-size: 1.6rem;
+    margin:0;
+}
+
+.box2{
+    position:sticky;
+    top:30px;
+    padding:2rem;
+    width:20rem;
+    height:15rem;
+    background-color: red;
+    color:#fff;
+    font-size: 1.6rem;
+    margin:0;
+}
+.total{
+    height:3000px;
+}
+.box3{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    padding:2rem;
+    width:20rem;
+    height:15rem;
+    background-color:blue;
+    color:#fff;
+    font-size: 1.6rem;
+    margin:0;
+}
