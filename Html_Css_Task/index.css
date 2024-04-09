@@ -1,3 +1,4 @@
+/* index.css - event update*/
 .event_update h2 {
     text-align: center;
     font-size: 3rem;
@@ -15,4 +16,25 @@
     border: 1px solid lightgray;
     padding: 2em;
 }
+
+/* index2.css event homepage*/
+.container.event_card {
+    padding-top: 3em;
+}
+.event_home {
+    float: left;
+    width: 100%;
+    padding: 5em;
+}
+.event_home .row.no-gutters {
+    align-items: center;
+}
+
+.event_home .text-center{
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    padding: 0.6em 0;
+}
+  
 
