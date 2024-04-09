@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Html_Css_Task/bootstrap.min.css" />
+    <script type="text/javascript" src="/Html_Css_Task/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Html_Css_Task/index.css"/>
+</head>
+<body>
+  
+<div class="container event_update">
+    <h2 class="mb-4">Event 1</h2>
+    <p class="mb-4">Number of Available Seats: 23</p>
+    <div class="row">
+        <div class="col-sm-6 left_side">
+            <div class="left_image">
+                <img class="img-fluid rounded-circle" src="/Html_Css_Task/nature.jpg" alt="dhoni_image"/>
+            </div>
+        </div>
+        <div class="col-sm-6 right_side">
+            <div class="right_form">
+                <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3">
+                  <label for="seats" class="form-label">Number of Seats</label>
+                  <select class="form-select" id="seats">
+                    <option selected>Select number of seats</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <!-- Add more options as needed -->
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="attendees" class="form-label">Number of Attendees</label>
+                  <input type="number" class="form-control" id="attendees" min="1" value="1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+         
+
+  
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* .container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    justify-content: center;
+    gap:10px;
+    border:3px solid lightgrey
+}
+.box{
+    background-color: blueviolet;
+} */
+
+/* body > *{
+    border:5px solid lightgrey;
+    color:#fff;
+    background-color: blue;text-align: center;
+}
+body{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+
+}
+header{
+    grid-column: 1/3;
+}
+footer{
+    grid-column: 1/3;
+} */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+.chessboard {
+    width:100vh;
+    height:100vh;
+    background-color:slategray;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Corrected grid-template-columns */
+    padding:20px;
+}
+.white {
+    background-color: #ffffff; /* Corrected color value */
+}
+.black {
+    background-color:#000; /* Corrected color value */
+}
