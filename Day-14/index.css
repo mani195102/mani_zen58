@@ -1,0 +1,12 @@
+.win_manager {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6em;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.mt-6{
+    margin-top:9rem !important;
+}

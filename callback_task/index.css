@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:#000000ad;
+  }
+  .countdown {
+    font-size: 90px;
+    font-weight: bold;
+    color:#fff;
+    margin-top: 3em;
+  }
+  .message {
+    display: none;
+    font-size: 40px;
+    color:Green;
+    font-weight:bold;
+    line-height: 40px;
+    padding: 2em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 5em;
+    border-radius:5px;
+  }
