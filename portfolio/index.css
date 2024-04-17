@@ -1,0 +1,55 @@
+h1{
+    margin:0;
+    font-size: 24px;
+    line-height: normal;
+    color:#fff;
+}
+body {
+    background-color: #00000075;
+}
+section {
+    padding: 4em 0;
+}
+a.navbar-brand,a.nav-link.active,a.nav-link{
+    font-size: 24px;
+    line-height: normal;
+
+}
+.col-sm-6.Port_left {
+    display: flex;
+    align-items: center;
+}
+.display-3,.display-4 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color:#fff;
+}
+.clear{
+    clear:both;
+    overflow: hidden;
+}
+.card {
+    background-color:#fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #000;
+    padding:0.4em;
+}
+a.card-link {
+    color: #000;
+}
+.About {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+}
+.card i.fa{
+    font-size: 60px;
+    line-height: 60px;
+}
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
