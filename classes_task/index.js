@@ -87,3 +87,44 @@ const movies = [
 const pgMovies = Movie.getPG(movies);
 console.log(pgMovies);
 
+/************** MINI TASK ********************************** */
+
+// leap year
+
+function isLeapYear(year) {
+    // Check if the input is a number
+    if (typeof year !== 'number' || isNaN(year)) {
+        throw new Error('Input must be a number');
+    }
+
+    // Leap year condition:
+    // A year is a leap year if it is divisible by 4
+    // But if it is divisible by 100, it must also be divisible by 400
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Example usage:
+console.log(isLeapYear(2024)); // Output: true
+console.log(isLeapYear(1900)); // Output: false
+console.log(isLeapYear(2000)); // Output: true
+
+
+// Reverse string task
+
+function reverseString(str) {
+    // Check if the input is a string
+    if (typeof str !== 'string') {
+        throw new Error('Input must be a string');
+    }
+
+    // Split the string into an array of characters, reverse it, then join it back into a string
+    return str.split('').reverse().join('');
+}
+
+// Example usage:
+console.log(reverseString("Hello")); // Output: "olleH"
+
