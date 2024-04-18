@@ -51,3 +51,39 @@ console.log(person1.getDetails());
 
 const person2 = new Person("Jane Smith", 25, "Female", "jane@example.com");
 console.log(person2.getDetails());
+
+
+// class pratice task
+
+class Movie {
+    constructor(title, studio, rating = "PG") {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+
+    static getPG(movies) {
+        /**
+         * Get movies with a rating of "PG" from the given array of movies.
+         * @param {Array<Movie>} movies - Array of Movie instances.
+         * @returns {Array<Movie>} Array of Movie instances with a rating of "PG".
+         */
+        return movies.filter(movie => movie.rating === "PG");
+    }
+}
+
+// Creating an instance of the class Movie
+const casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
+
+// Example usage of the getPG method
+const movies = [
+    new Movie("Movie1", "Studio1", "PG"),
+    new Movie("Movie2", "Studio2", "PG-13"),
+    new Movie("Movie3", "Studio3", "R"),
+    new Movie("Movie4", "Studio4", "PG"),
+    new Movie("Movie5", "Studio5", "PG-13")
+];
+
+const pgMovies = Movie.getPG(movies);
+console.log(pgMovies);
+
