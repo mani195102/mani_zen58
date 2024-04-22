@@ -1,0 +1,20 @@
+body{
+    background-color: #0000009e;
+}
+
+h2.ht_title {
+    text-align: center;
+    font-size: 3rem;
+    background-color: #000;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+.form-check{
+    display: inline-block;
+    margin:0  1.25rem;
+}
+.container.mt-5 {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.4em;
+}
