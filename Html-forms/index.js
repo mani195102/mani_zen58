@@ -1,11 +1,11 @@
 // value submission in table
 
-document.getElementById('myForm').addEventListener('submit', function(event) {
+document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Get form values
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
+    var firstName = document.getElementById('first-name').value;
+    var lastName = document.getElementById('last-name').value;
     var address = document.getElementById('address').value;
     var pincode = document.getElementById('pincode').value;
     var gender = document.getElementById('gender').value;
@@ -44,5 +44,5 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     cell8.innerHTML = foodArray.join(', ');
 
     // Clear form fields
-    document.getElementById('myForm').reset();
+    document.getElementById('form').reset();
   });
