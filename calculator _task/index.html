@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/calculator _task/index.css"/>
+    <script src="/calculator _task/index.js" defer></script>
+    
+</head>
+<body>
+    <main>
+        <h1 id="title">Calculator</h1>
+        <p id="description">Calculator task we can perform arithmetic operation using html css bootstrap and Javascript</p>
+        <div class="container">
+            <div class="calculator">
+                <input type="text" id="screen" class="form-control" readonly>
+                <div class="buttons">
+                    <button onclick="clearScreen()" class="btn btn-danger">C</button>
+                    <button onclick="addToScreen('%')" class="btn btn-secondary">%</button>
+                    <button onclick="addToScreen('+')" class="btn btn-secondary">+</button>
+                    <button onclick="addToScreen('-')" class="btn btn-secondary">-</button>
+                    <button onclick="addToScreen('*')" class="btn btn-secondary">*</button>
+                    <button onclick="calculate()" class="btn btn-primary">=</button>
+                    <button onclick="addToScreen('7')" class="btn btn-primary">7</button>
+                    <button onclick="addToScreen('8')" class="btn btn-primary">8</button>
+                    <button onclick="addToScreen('9')" class="btn btn-primary">9</button>
+                    <button onclick="addToScreen('4')" class="btn btn-primary">4</button>
+                    <button onclick="addToScreen('5')" class="btn btn-primary">5</button>
+                    <button onclick="addToScreen('6')" class="btn btn-primary">6</button>
+                    <button onclick="addToScreen('1')" class="btn btn-primary">1</button>
+                    <button onclick="addToScreen('2')" class="btn btn-primary">2</button>
+                    <button onclick="addToScreen('3')" class="btn btn-primary">3</button>
+                    <button onclick="addToScreen('0')" class="btn btn-primary">0</button>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    
+</body>
+</html>

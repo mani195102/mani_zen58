@@ -1,0 +1,57 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+h1#title {
+    text-align: center;
+    font-size: 3em;
+}
+p#description {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom:4rem;
+}
+body {
+    background-color: #0009;
+}
+div#content {
+    text-align: center;
+    margin: 3em;
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+.container.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+}
+.page-link {
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #f0f0f0;
+    color:#000;
+}
+
+.page-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.content {
+    margin-top: 20px;
+}
