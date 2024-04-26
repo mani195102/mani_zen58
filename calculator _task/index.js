@@ -1,4 +1,4 @@
-let screen = document.getElementById('screen');
+let screen = document.getElementById('result');
 
 // Function to add number or operator to screen
 function addToScreen(value) {
@@ -10,24 +10,47 @@ function clearScreen() {
     screen.value = '';
 }
 
-// Function to calculate result
-function calculate() {
+// Function to perform arithmetic operations
+function performOperation() {
+    let expression = screen.value;
     try {
-        let result = eval(screen.value);
+        let result = eval(expression);
         screen.value = result;
     } catch (error) {
         alert('Invalid expression!');
     }
 }
 
-// Event listener for keyboard input
-document.addEventListener('keydown', function(event) {
-    const key = event.key;
-    if (!isNaN(key) || key === '+' || key === '-' || key === '*' || key === '/' || key === '%') {
-        addToScreen(key);
-    } else if (key === 'Enter') {
-        calculate();
-    } else {
-        alert('Only numbers and operators are allowed!');
-    }
+// Event listener for the equal button to perform calculation
+document.getElementById('equal').addEventListener('click', function() {
+    performOperation();
 });
+
+// Event listeners for operator buttons
+document.getElementById('add').addEventListener('click', function() {
+    addToScreen('+');
+});
+
+document.getElementById('subtract').addEventListener('click', function() {
+    addToScreen('-');
+});
+
+document.getElementById('multiply').addEventListener('click', function() {
+    addToScreen('*');
+});
+
+document.getElementById('percent').addEventListener('click', function() {
+    addToScreen('%');
+});
+
+// Event listener for the clear button
+document.getElementById('clear').addEventListener('click', function() {
+    clearScreen();
+});
+
+// Event listeners for number buttons
+for (let i = 0; i <= 9; i++) {
+    document.getElementById(i.toString()).addEventListener('click', function() {
+        addToScreen(i.toString());
+    });
+}
