@@ -4,7 +4,7 @@ body {
 img.card-img-top {
     width: 100%;
     object-fit: cover;
-    height: 240px;
+    height: 160px;
     margin-bottom:1em;
 }
 h1#title {
