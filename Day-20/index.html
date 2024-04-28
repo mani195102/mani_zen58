@@ -23,6 +23,7 @@
             </div>
             <div id="output" class="card-footer text-muted"></div>
           </div>
+      
           <div class="card mb-4">
             <div class="card-header">
               Arrow functions
@@ -34,6 +35,47 @@
             </div>
             <div id="arrowOutput" class="card-footer text-muted"></div>
           </div>
+
+          <div class="card mb-4">
+            <div class="card-header">
+              this keyword and lexical  Scoping;
+            </div>
+            <div  class="card-body">
+                 <button id="traditionalBtn" class="btn btn-info">Tradition function</button>
+                 <button id="arrowBtn" class="btn btn-info">Arrow function</button>
+                 <p id ="traditionalOutput"></p>
+                 <p id ="thisarrowOutput"></p>
+                
+            </div>
+          </div>
+
+          
+          <div class="card mb-4">
+            <div class="card-header">
+              Template Literals;
+            </div>
+            <div  class="card-body">
+                 <button id="traditionalBtn"onclick="templateliterals()" class="btn btn-warning">Template Literals</button>
+                 <button id="traditionalBtn"onclick="IIFEliterals()" class="btn btn-warning">IIFE Literals</button>
+                <p id ="templateOutput"></p>
+                <p id ="IIFEOutput"></p>
+            </div>
+          </div>
+
+          <div class="card mb-4">
+            <div class="card-header">
+              Spread and Rest operators;
+            </div>
+            <div  class="card-body">
+                 <button id="spreadBtn"onclick="testSpread()" class="btn btn-secondary">Test spread</button>
+                <button id="restBtn"onclick="testRest(2,3,4,5,6,7,8)" class="btn btn-secondary">Test rest</button>
+                <p id ="spreadOutput"></p>
+                <p id ="restOutput"></p>
+
+            </div>
+          </div>
+
+          
     </div>
   
     
