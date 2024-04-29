@@ -26,7 +26,6 @@
         try {
           const apiKey = `f052fd2598c990288c30db76b5d6c452`;
           const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
-          console.log(url);
           const response = await fetch(url);
           const data = await response.json();
           const weatherDescription = data.weather[0].description;
