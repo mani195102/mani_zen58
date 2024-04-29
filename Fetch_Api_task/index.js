@@ -6,11 +6,11 @@
             <div class="card">
             <div class="card-header card-title">${name.common}</div>
               <div class="card-body">
-              <img src="${flags.png}" class="card-img-top" alt="Flag">
-                <p class="card-text">Capital: ${capital}</p>
-                <p class="card-text">Country Code: ${cca2}</p>
-                <p class="card-text">Region: ${region}</p>
-                <p class="card-text">Latlng: ${latlng.join(', ')}</p>
+              <img src="${flags.png}" class="card-img-top shadow-drop-2-center" alt="Flag">
+                <p class="card-text"><strong>Capital :</strong> ${capital}</p>
+                <p class="card-text"><strong>Country Code :</strong> ${cca2}</p>
+                <p class="card-text"><strong>Region :</strong> ${region}</p>
+                <p class="card-text"><strong>Latlng :</strong> ${latlng.join(', ')}</p>
                 <input type="hidden" class="latitude" value="${latlng[0]}">
                 <input type="hidden" class="longitude" value="${latlng[1]}">
                 <button class="btn btn-primary show-weather-btn">Click for Weather</button>
