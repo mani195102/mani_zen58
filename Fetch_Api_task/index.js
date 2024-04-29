@@ -2,9 +2,9 @@
     function createCountryCard(countryData) {
         const { flags, capital, name, cca2, region, latlng } = countryData;
         const cardHTML = `
-          <div class="col-lg-4 col-sm-6 back">
+          <div class="col-lg-4 col-md-6 col-sm-12 back">
             <div class="card">
-            <div class="card-header"><h4 class="card-title">${name.common}</h4></div>
+            <div class="card-header card-title">${name.common}</div>
               <div class="card-body">
               <img src="${flags.png}" class="card-img-top" alt="Flag">
                 <p class="card-text">Capital: ${capital}</p>

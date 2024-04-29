@@ -16,12 +16,16 @@ h1#title {
     border-start-end-radius: 20px;
     border-start-start-radius: 20px;
 }
-h4.card-title{
+.card-header.card-title{
     margin:0;
+    font-size:1.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 p.card-text {
-    color: #fff;
-    border-bottom: 1px solid #000;
+    color: #000;
+    border-bottom: 1px solid #fff;
 }
 .back {
     
