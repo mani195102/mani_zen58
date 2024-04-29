@@ -24,7 +24,9 @@
       // Function to fetch weather data from OpenWeatherMap API
       async function fetchWeatherData(latitude, longitude, countryName) {
         try {
+          const apiKey = `f052fd2598c990288c30db76b5d6c452`;
           const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+          console.log(url);
           const response = await fetch(url);
           const data = await response.json();
           const weatherDescription = data.weather[0].description;
@@ -40,8 +42,8 @@
           const cardBody = event.target.parentElement;
           const cardHeader = cardBody.parentElement;
           const countryName = cardHeader.querySelector('.card-title').textContent;
-          const latitude = parseFloat(cardBody.querySelector('.latitude').textContent);
-          const longitude = parseFloat(cardBody.querySelector('.longitude').textContent);
+          const latitude = parseFloat(cardBody.querySelector('.latitude').value);
+          const longitude = parseFloat(cardBody.querySelector('.longitude').value);
           await fetchWeatherData(latitude, longitude, countryName);
         }
       });
