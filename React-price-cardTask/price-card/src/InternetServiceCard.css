@@ -1,0 +1,33 @@
+.card-container {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    margin: 0 0px;
+}
+h1.text-center.mb-5{
+    background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0.2em 0;
+    border-start-start-radius:10px;
+    border-start-end-radius:10px;
+    color:#fff;
+}
+.react-pricecard .card-header{
+    background: radial-gradient(circle at 10% 20%, rgb(59, 149, 237) 0%, rgb(7, 91, 173) 90%);
+   color:#fff;
+    text-align: center;
+    border-start-start-radius:20px;
+    border-start-end-radius:20px;
+}
+.minwidth{
+    min-width:100%;
+}
+.react-pricecard {
+    float: left;
+    width: 100%;
+    margin: 4em 0;
+}
+.price-cards.row .card {
+    background-color: transparent !important;
+    border:unset;
+}
