@@ -86,4 +86,24 @@ function testRest(...args){
     document.getElementById("IIFEOutput").innerText = `IIFE-name : ${name}, IIFE-age: ${age};`
 })();
 
+// using Classes
+
+class Task {
+    constructor (description){
+        this.description = description;
+        this.completed = false;
+    }
+    oncomplete(){
+        this.completed = !this.completed;
+    }
+}
+
+function testClass(){
+    const task = new Task("Learn Javascript");
+    task.oncomplete();
+    document.getElementById("classOutput").innerHTML = `Task: ${task.description}, Completed: ${task.completed}`;
+}
+
+
+
 

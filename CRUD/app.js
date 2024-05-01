@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 let users = [];
 
 async function fetchUsers() {
-  debugger;
-  const response = await fetch(
-    "https://lucifer-quotes.vercel.app/api/quotes/50"
-  );
+  // debugger;
+  const response = await fetch( "https://jsonplaceholder.typicode.com/users");
   users = await response.json();
   renderUsers();
 }
@@ -20,8 +18,8 @@ function renderUsers() {
     const row = document.createElement("tr");
     row.innerHTML = `
     <td>${index + 1}</td>
-    <td>${user.quote}</td>
-    <td>${user.author}</td>
+    <td>${user.name}</td>
+    <td>${user.email}</td>
     <td>
         <button onclick="editUser(${user.id})" type="button" 
         class="btn btn-secondary btn-sm">Edit</button>
