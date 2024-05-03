@@ -1,0 +1,41 @@
+body {
+    background-color: #0000008f;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1#title{
+  color:#fff;
+  margin:1.2em 0;
+}
+.quote-container {
+  margin-top: 50px;
+}
+.text-right{
+  font-weight:bold;
+}
+.lucy-quote {
+  padding:15px;
+  color:#fff;
+  border-radius:5px;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);  width: 95%;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quote {
+  padding: 0;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:480px) {
+  .lucy-quote{
+    width:100%;
+  }
+}
+
+
+
