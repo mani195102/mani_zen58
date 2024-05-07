@@ -1,0 +1,25 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 4.5em 0;
+}
+.product img.card-img-top {
+    width: 100%;
+    object-fit:cover;
+    object-position: top;
+    height: 240px;
+}
+.product .card{
+    min-height:500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+}
+.product button.btn.btn-primary {
+    min-width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
