@@ -1,0 +1,140 @@
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+.hero {
+  background-color: #0040C1;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  /* z-index: 0; */
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #0051f4;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left:7vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left:64vw;
+  top: 16vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left:28vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+.dropdown {
+  display: inline-block;
+  margin-right:5px;
+}
+.dropdown-toggle::after{
+  vertical-align:.195em;
+}
+.completed-item {
+  background-color: #d4edda; /* Green background for completed items */
+  color: #155724; /* Dark green text color */
+}
+
+.not-completed-item {
+  background-color: #f8d7da; /* Red background for not completed items */
+  color: #721c24; /* Dark red text color */
+}
+.container.mt-5 {
+  max-width: 90%;
+  background-color: honeydew;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2em;
+  border-radius: 5px;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color:#fff;
+  color:#000;
+}
+select.form-select {
+  width: 18%;
+  float: right;
+}
+.useInput {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+@media screen and (min-width: 992px) and (max-width: 1340px) { 
+
+  .todo{
+    width:50%;
+  }
+}
+  @media screen and (max-width: 480px) { 
+    .useInput{
+      flex-direction: column;
+    }
+    .container.mt-5{
+      padding: 1em;
+    }
+    .dropdown {
+      display: block;
+      margin-right: 0;
+    }
+    select.form-select{
+      width:100%;
+    }
+    .todo button.btn {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 13px;
+  }
+  }

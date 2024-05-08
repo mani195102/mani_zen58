@@ -1,0 +1,8 @@
+.task-tracker {
+    background-color: #000000b8;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    padding: 1.5em 1em;
+    margin: 2em 0;
+    color:#fff;
+}
