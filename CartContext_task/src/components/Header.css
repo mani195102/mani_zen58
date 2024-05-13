@@ -1,0 +1,8 @@
+.shop-side {
+    background-color: #fff;
+    padding:0.4em 0;
+}
+.shop-side .container {
+    display: flex;
+    justify-content: space-between;
+}
