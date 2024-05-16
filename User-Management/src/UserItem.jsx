@@ -10,10 +10,6 @@ function UserItem({user, onEdit, onDelete}) {
                   <strong>Name:</strong>  {user.name}
                 </Typography>
                 <Typography variant='p' style={{ color:'#fff'}}>
-                  <strong>Company:</strong>  {user.company.name}
-                </Typography>
-                <br/>
-                <Typography variant='p' style={{ color:'#fff'}}>
                 <strong>Email:</strong>  {user.email}
                 </Typography>
                 <br/>
@@ -22,7 +18,7 @@ function UserItem({user, onEdit, onDelete}) {
                 </Typography>
             </CardContent>
             <CardActions>
-            <Button variant="contained" size="small" color='success'
+            <Button variant="contained" size="small" color='primary'
                         onClick={() => onEdit(user)}>
                         Edit
                     </Button>

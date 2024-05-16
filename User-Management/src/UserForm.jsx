@@ -3,7 +3,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } 
 
 
 function UserForm({ user, onSave, onCancel }) {
-    const [formData, setFormData] = useState({ name: '', email: '' });
+    const [formData, setFormData] = useState({ name: '', email: '',phone:'' });
 
     useEffect(() => {
         if (user) {
@@ -13,8 +13,8 @@ function UserForm({ user, onSave, onCancel }) {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value })
-    }
+         setFormData({ ...formData, [name]: value })
+       }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,6 +42,15 @@ function UserForm({ user, onSave, onCancel }) {
                     type='email'
                     fullWidth
                     value={formData.email}
+                    onChange={handleChange}></TextField>                  
+                       <TextField
+                    autoFocus
+                    margin='dense'
+                    name='phone'
+                    label='phone'
+                    type='phone'
+                    fullWidth
+                    value={formData.phone}
                     onChange={handleChange}></TextField>
             </DialogContent>
             <DialogActions>
