@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Container, Grid, Typography, Button, Paper, Snackbar, Alert } from '@mui/material'
+import { Container, Grid, Typography, Button, Paper, Snackbar, Alert } from '@mui/material';
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 import UserItem from './UserItem';
 import UserForm from './UserForm';
 
@@ -12,6 +15,12 @@ function UserList() {
     useEffect(() => {
         fetchUsers();
     }, [])
+
+    const fabStyle = {
+        position: 'fixed',
+        top: 30,
+        right:50,
+      };
 
     const fetchUsers = async () => {
         try {
@@ -80,9 +89,12 @@ function UserList() {
                         </UserItem>
                     ))}
                 </Grid>
-                <Button variant="contained" color='primary' 
-                style={{ marginTop: '20px' }}
-                    onClick={() => setEditingUser({})}>Add user</Button>
+                <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                    <Fab color="primary"  style={fabStyle}
+                    onClick={() => setEditingUser({})}aria-label="add">
+                        <AddIcon />
+                    </Fab>
+                 </Box>
                 {editingUser && (
                     <UserForm
                         user={editingUser}

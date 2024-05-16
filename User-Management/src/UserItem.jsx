@@ -1,5 +1,8 @@
 import React from 'react';
 import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material';
+import Fab from '@mui/material/Fab';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 function UserItem({ user, onEdit, onDelete }) {
   const truncate = (str, n) => {
@@ -54,12 +57,12 @@ function UserItem({ user, onEdit, onDelete }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button variant="contained" size="small" color='success' onClick={() => onEdit(user)}>
-            Edit
-          </Button>
-          <Button variant="contained" size="small" color='secondary' onClick={() => onDelete(user.id)}>
-            Delete
-          </Button>
+        <Fab color="success" aria-label="edit" onClick={() => onEdit(user)}>
+        <EditIcon />
+      </Fab>
+          <Fab color="secondary" aria-label="edit" onClick={() => onDelete(user.id)}>
+        <DeleteIcon />
+      </Fab>
         </CardActions>
       </Card>
     </Grid>
