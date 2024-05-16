@@ -6,19 +6,24 @@ function UserItem({user, onEdit, onDelete}) {
     <Grid  item xs={12} sm={6} md={4}>
         <Card style={ {backgroundColor : '#000000bd'}}>
             <CardContent>
-                <Typography variant='h6' style={{ color:'#fff'}}>
-                  <strong>Name:</strong>  {user.name}
+                <Typography variant='h6' style={{ width:'100%',display:'block',paddingBottom:'5px',marginBottom:'5px',color:'#fff',borderBottom:'1px solid #fff'}}>
+                  <strong style={{color:'yellow'}}>Name:</strong>  {user.name}
                 </Typography>
-                <Typography variant='p' style={{ color:'#fff'}}>
-                <strong>Email:</strong>  {user.email}
+                <Typography variant='p' style={{ width:'100%',display:'block',paddingBottom:'5px',marginBottom:'5px',color:'#fff',borderBottom:'1px solid #fff'}}>
+                <strong style={{color:'yellow'}}>company:</strong>  {user.company.name}
                 </Typography>
-                <br/>
-                <Typography variant='p' style={{ color:'#fff'}}>
-                <strong>Phone:</strong>  {user.phone}
+                <Typography variant='p' style={{ width:'100%',display:'block',paddingBottom:'5px',marginBottom:'5px',color:'#fff',borderBottom:'1px solid #fff'}}>
+                <strong style={{color:'yellow'}}>Email:</strong>  {user.email}
+                </Typography>
+                <Typography variant='p' style={{ width:'100%',display:'block',paddingBottom:'5px',marginBottom:'5px',color:'#fff',borderBottom:'1px solid #fff'}}>
+                <strong style={{color:'yellow'}}>Phone:</strong>  {user.phone}
+                </Typography>
+                <Typography variant='p' style={{ width:'100%',display:'block',paddingBottom:'5px',marginBottom:'5px',color:'#fff',borderBottom:'1px solid #fff'}}>
+                <strong style={{color:'yellow'}}>City:</strong>  {user.address.city}
                 </Typography>
             </CardContent>
             <CardActions>
-            <Button variant="contained" size="small" color='primary'
+            <Button variant="contained" size="small" color='success'
                         onClick={() => onEdit(user)}>
                         Edit
                     </Button>

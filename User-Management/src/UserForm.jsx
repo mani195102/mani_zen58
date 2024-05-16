@@ -3,18 +3,27 @@ import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } 
 
 
 function UserForm({ user, onSave, onCancel }) {
-    const [formData, setFormData] = useState({ name: '', email: '',phone:'' });
+    const [formData, setFormData] = useState({ name: '', company: {name: ''},email: '',phone:'',address:{city: ''} });
 
     useEffect(() => {
         if (user) {
-            setFormData(user);
+            setFormData({
+                ...user,
+                company: user.company || { name: '' },address: user.address || { city: '' }   // Ensure company is an object
+            });
         }
     }, [user]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-         setFormData({ ...formData, [name]: value })
-       }
+        if (name === 'company') {
+            setFormData({ ...formData, company: { name: value } });
+        } else if (name === 'city') {
+            setFormData({ ...formData, address: { city: value } });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,6 +43,16 @@ function UserForm({ user, onSave, onCancel }) {
                     fullWidth
                     value={formData.name}
                     onChange={handleChange}></TextField>
+
+                     <TextField
+                    autoFocus
+                    margin='dense'
+                    name='company'
+                    label='Company'
+                    type='text'
+                    fullWidth
+                    value={formData.company.name}
+                    onChange={handleChange}></TextField>
                 <TextField
                     autoFocus
                     margin='dense'
@@ -42,7 +61,16 @@ function UserForm({ user, onSave, onCancel }) {
                     type='email'
                     fullWidth
                     value={formData.email}
-                    onChange={handleChange}></TextField>                  
+                    onChange={handleChange}></TextField> 
+                          <TextField
+                    autoFocus
+                    margin='dense'
+                    name='city'
+                    label='city'
+                    type='text'
+                    fullWidth
+                    value={formData.address.city}
+                    onChange={handleChange}></TextField>                 
                        <TextField
                     autoFocus
                     margin='dense'
