@@ -19,7 +19,7 @@ function UserList() {
     const fabStyle = {
         position: 'fixed',
         top: 30,
-        right:50,
+        right:20,
       };
 
     const fetchUsers = async () => {
