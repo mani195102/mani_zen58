@@ -1,0 +1,2 @@
+Timestamp: 2024-05-29T14-05-25.432Z
+Filename: mytime.txt
