@@ -15,7 +15,8 @@ function UserList() {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+           // const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+            const response = await axios.get("http://localhost:3000/apiUser/users");
             setUsers(response.data);
         } catch (error) {
             console.log('Error fetching users:', error);
@@ -25,8 +26,9 @@ function UserList() {
 
     const addUser = async (user) => {
         try {
-            console.log("Axios check", axios.post(`https://jsonplaceholder.typicode.com/users/`, user));
-            const response = await axios.post(`https://jsonplaceholder.typicode.com/users/`, user);
+            // console.log("Axios check", axios.post(`https://jsonplaceholder.typicode.com/users/`, user));
+            //const response = await axios.post(`https://jsonplaceholder.typicode.com/users/`, user);
+            const response = await axios.post(`http://localhost:3000/apiUser/users`, user);
             setUsers([...users, response.data]);
             setEditingUser(null);
             showSnackbar('User addes successfully', 'success');
@@ -38,8 +40,10 @@ function UserList() {
 
     const updateUser = async (user) => {
         try {
-            await axios.put(`https://jsonplaceholder.typicode.com/users/${user.id}`, user);
-            setUsers(users.map((u) => (u.id === user.id ? user : u)));
+           // await axios.put(`https://jsonplaceholder.typicode.com/users/${user.id}`, user);
+           await axios.put(`http://localhost:3000/apiUser/users/${user._id}`, user);
+            //setUsers(users.map((u) => (u.id === user.id ? user : u)));
+            fetchUsers();
             setEditingUser(null);
             showSnackbar('User updated successfully', 'success');
         } catch (error) {
@@ -50,8 +54,10 @@ function UserList() {
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-            setUsers(users.filter((user) => user.id !== id));
+            //await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+            await axios.delete(`http://localhost:3000/apiUser/users/${id}`);
+           // setUsers(users.filter((user) => user.id !== id));
+           fetchUsers();
             showSnackbar('User deleted Successfully', 'success');
         } catch (error) {
             console.log('Error deleting users:', error);
@@ -73,7 +79,7 @@ function UserList() {
                 <Grid container spacing={3}>
                     {users.map((user) => (
                         <UserItem
-                            key={user.id}
+                            key={user._id}
                             user={user}
                             onEdit={setEditingUser}
                             onDelete={deleteUser}>
@@ -86,7 +92,7 @@ function UserList() {
                 {editingUser && (
                     <UserForm
                         user={editingUser}
-                        onSave={editingUser.id ? updateUser : addUser}
+                        onSave={editingUser._id ? updateUser : addUser}
                         onCancel={() => setEditingUser(null)}
                     />
                 )}
